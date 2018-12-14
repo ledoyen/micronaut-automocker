@@ -18,12 +18,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <micronaut-automocker.version>${project.version}</micronaut-automocker.version>
 
-        <micronaut.version>1.0.1</micronaut.version>
-        <micronaut-test.version>1.0.0.RC1</micronaut-test.version>
+        <micronaut.version>1.1.0.M2</micronaut.version>
+        <micronaut-test.version>1.0.2</micronaut-test.version>
         <logback.version>1.2.3</logback.version>
 
-        <junit-jupiter.version>5.3.1</junit-jupiter.version>
-        <assertj.version>3.11.1</assertj.version>
+        <junit-jupiter.version>5.4.0</junit-jupiter.version>
+        <assertj.version>3.12.1</assertj.version>
+        <mockito.version>2.25.1</mockito.version>
 
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
@@ -84,6 +85,11 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -110,4 +116,18 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <repositories>
+        <repository>
+            <id>Maven central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>Sonatype snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
