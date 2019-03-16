@@ -4,19 +4,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.inject.Inject;
 
+import io.micronaut.http.HttpMethod;
 import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 
-@MicronautTest
+import com.github.fridujo.micronaut.automocker.Automocker;
+import com.github.fridujo.micronaut.automocker.http.server.netty.MockMvc;
+import com.github.fridujo.micronaut.automocker.http.server.netty.ReadableHttpResponse;
+
+@Automocker
 public class WebApplicationIntegrationTest {
 
     @Inject
-    HelloClient helloClient;
+    MockMvc mockMvc;
 
     @Test
     void testHello() {
-        assertEquals(
-            "Hello Fred!",
-            helloClient.hello("Fred").blockingGet());
+        ReadableHttpResponse<?> response = mockMvc.exchange(HttpMethod.GET, "/hello/Fred");
+        assertEquals("Hello Fred!", response.bodyAsString());
     }
 }

@@ -50,14 +50,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.micronaut</groupId>
-            <artifactId>micronaut-http-client</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>io.micronaut.test</groupId>
             <artifactId>micronaut-test-junit5</artifactId>
-            <version>1.0.0.RC1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
