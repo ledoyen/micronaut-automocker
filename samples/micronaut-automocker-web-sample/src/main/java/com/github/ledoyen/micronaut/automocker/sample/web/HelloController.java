@@ -1,4 +1,4 @@
-package com.github.fridujo.micronaut.automocker.sample.web;
+package com.github.ledoyen.micronaut.automocker.sample.web;
 
 import javax.validation.constraints.NotBlank;
 

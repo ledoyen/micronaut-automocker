@@ -1,4 +1,4 @@
-package com.github.fridujo.micronaut.automocker;
+package com.github.ledoyen.micronaut.automocker;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

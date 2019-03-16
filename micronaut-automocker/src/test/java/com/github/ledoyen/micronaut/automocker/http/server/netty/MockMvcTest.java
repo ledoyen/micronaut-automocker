@@ -1,4 +1,4 @@
-package com.github.fridujo.micronaut.automocker.http.server.netty;
+package com.github.ledoyen.micronaut.automocker.http.server.netty;
 
 import static java.util.Optional.empty;
 import static org.assertj.core.api.Assertions.assertThat;

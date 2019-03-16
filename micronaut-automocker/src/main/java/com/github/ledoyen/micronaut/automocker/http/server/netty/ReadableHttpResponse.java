@@ -1,4 +1,4 @@
-package com.github.fridujo.micronaut.automocker.http.server.netty;
+package com.github.ledoyen.micronaut.automocker.http.server.netty;
 
 import java.util.Optional;
 

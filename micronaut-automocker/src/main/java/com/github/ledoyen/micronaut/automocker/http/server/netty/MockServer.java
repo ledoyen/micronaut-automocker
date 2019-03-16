@@ -1,4 +1,4 @@
-package com.github.fridujo.micronaut.automocker.http.server.netty;
+package com.github.ledoyen.micronaut.automocker.http.server.netty;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -7,6 +7,7 @@ import java.net.URL;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import com.github.ledoyen.micronaut.automocker.Automocker;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.context.annotation.Replaces;
 import io.micronaut.context.exceptions.ConfigurationException;
@@ -18,7 +19,7 @@ import io.micronaut.runtime.server.EmbeddedServer;
  * Stub for {@link NettyHttpServer} to avoid listening on a port and exposing HTTP services.
  *
  * @see MockMvc
- * @see com.github.fridujo.micronaut.automocker.Automocker
+ * @see Automocker
  */
 @Singleton
 @Replaces(NettyHttpServer.class)

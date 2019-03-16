@@ -1,9 +1,10 @@
-package com.github.fridujo.micronaut.automocker.http.server.netty;
+package com.github.ledoyen.micronaut.automocker.http.server.netty;
 
 import java.util.Optional;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import com.github.ledoyen.micronaut.automocker.Automocker;
 import io.micronaut.core.annotation.AnnotationMetadata;
 import io.micronaut.core.convert.ConversionService;
 import io.micronaut.http.HttpMethod;
@@ -22,7 +23,7 @@ import io.micronaut.web.router.UriRouteMatch;
  * API from where to call HTTP services as if they were exposed.
  *
  * @see MockServer
- * @see com.github.fridujo.micronaut.automocker.Automocker
+ * @see Automocker
  */
 @Singleton
 public class MockMvc {
