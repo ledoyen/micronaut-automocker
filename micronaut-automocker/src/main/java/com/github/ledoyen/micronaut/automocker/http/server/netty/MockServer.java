@@ -14,6 +14,8 @@ import io.micronaut.context.exceptions.ConfigurationException;
 import io.micronaut.http.server.netty.NettyHttpServer;
 import io.micronaut.runtime.ApplicationConfiguration;
 import io.micronaut.runtime.server.EmbeddedServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Stub for {@link NettyHttpServer} to avoid listening on a port and exposing HTTP services.
@@ -25,6 +27,7 @@ import io.micronaut.runtime.server.EmbeddedServer;
 @Replaces(NettyHttpServer.class)
 public class MockServer implements EmbeddedServer {
 
+    private final Logger logger = LoggerFactory.getLogger(MockServer.class);
     private final String scheme = "http";
     private final String host = "test";
     private final int port = -1;
@@ -33,7 +36,7 @@ public class MockServer implements EmbeddedServer {
     @Inject
     public MockServer(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
-        System.out.println("Mocking NettyHttpServer");
+        logger.debug("Mocking {}", NettyHttpServer.class.getSimpleName());
     }
 
     @Override
