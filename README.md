@@ -1,6 +1,5 @@
 # Micronaut-Automocker
 [![Build Status](https://travis-ci.com/ledoyen/micronaut-automocker.svg?branch=master)](https://travis-ci.com/ledoyen/micronaut-automocker)
-[![codecov](https://codecov.io/gh/ledoyen/micronaut-automocker/branch/master/graph/badge.svg)](https://codecov.io/gh/ledoyen/micronaut-automocker)
 [![License](https://img.shields.io/github/license/ledoyen/micronaut-automocker.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Automatic detection and mocking of IO components for the [Micronaut Framework](http://micronaut.io).
