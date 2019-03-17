@@ -18,13 +18,26 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>io.micronaut.test</groupId>
+            <artifactId>micronaut-test-junit5</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-server-netty</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
-            <groupId>io.micronaut.test</groupId>
-            <artifactId>micronaut-test-junit5</artifactId>
+            <groupId>io.micronaut.configuration</groupId>
+            <artifactId>micronaut-rabbitmq</artifactId>
+            <scope>provided</scope>
+            <version>1.1.0.M2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fridujo</groupId>
+            <artifactId>rabbitmq-mock</artifactId>
             <scope>provided</scope>
         </dependency>
 

@@ -19,7 +19,7 @@
         <micronaut-automocker.version>${project.version}</micronaut-automocker.version>
 
         <micronaut.version>1.1.0.M2</micronaut.version>
-        <micronaut-test.version>1.0.2</micronaut-test.version>
+        <rabbitmq-mock.version>1.0.10</rabbitmq-mock.version>
         <logback.version>1.2.3</logback.version>
 
         <junit-jupiter.version>5.4.0</junit-jupiter.version>
@@ -33,6 +33,7 @@
     <modules>
         <module>micronaut-automocker</module>
         <module>samples/micronaut-automocker-web-sample</module>
+        <module>samples/micronaut-automocker-amqp-sample</module>
     </modules>
 
     <dependencyManagement>
@@ -52,17 +53,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>io.micronaut.test</groupId>
-                <artifactId>micronaut-test-junit5</artifactId>
-                <version>${micronaut-test.version}</version>
-                <scope>test</scope>
-            </dependency>
 
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.fridujo</groupId>
+                <artifactId>rabbitmq-mock</artifactId>
+                <version>${rabbitmq-mock.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
